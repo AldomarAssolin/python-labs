@@ -1,5 +1,4 @@
-
-<img src="[public/images/thumb.png](https://ibb.co/zHG7rjSM)"/>
+<img src="https://i.ibb.co/XkS3bNzQ/Chat-GPTPython-Labs.png" alt="Chat-GPTPython-Labs" border="0" width="460">
 
 # 🧠 Python Labs – Estudos de Python, Algoritmos e Inteligência Artificial
 

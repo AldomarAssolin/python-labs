@@ -1,5 +1,5 @@
 
-<img src="public/images/thumb.png"/>
+<img src="[public/images/thumb.png](https://ibb.co/zHG7rjSM)"/>
 
 # 🧠 Python Labs – Estudos de Python, Algoritmos e Inteligência Artificial
 

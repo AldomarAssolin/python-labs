@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <img src="public/images/thumb.png"/>
 
 # 🧠 Python Labs – Estudos de Python, Algoritmos e Inteligência Artificial
@@ -143,8 +143,3 @@ Formando em Análise e Desenvolvimento de Sistemas | Entusiasta em IA <br>
 
 ***
 
-
-=======
-# python-labs
-Repositório de estudos Python com base nos livros - "Introdução à programação com Python" (Nilo Ney Coutinho Menezes) e "Entendendo Algoritmos" (Aditya Bhargava).
->>>>>>> 90c2c80db25cd781f9548d4ca8bc302303751421

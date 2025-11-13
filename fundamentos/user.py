@@ -75,24 +75,7 @@ print(f'Data atual: {today}')
 print('-*'*20)
 print('Obrigado por se cadastrar!')
 
-'''
-print(gener)
-print(email)
-print(phone)
-'''
 
-'''
-birth_date_ano = int(input('Digite o ANO do seu nascimento: '.strip()))
-if 1920 < birth_date_ano <= date.year:
-    birth_date_ano = birth_date_ano
-else:
-    print('Digite um valor entre 1920 e o ano atual.')
-    birth_date_ano = int(input('Digite o ANO do seu nascimento: '.strip()))
-birth_date = '{}/{}/{}'.format(birth_date_day, birth_date_month, birth_date_ano)
-print(birth_date)
-idade = date.today().year - birth_date_ano
-print(idade, 'anos.')
-'''
 
 
 

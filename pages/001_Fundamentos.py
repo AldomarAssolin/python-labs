@@ -16,19 +16,28 @@ if not fundamentos_dir.exists():
 else:
     
     py_files = list(fundamentos_dir.glob("*.py"))
-    if not py_files:
-        st.write("Em breve teremos conteúdo para compartilhar!")
-    else:
-        st.markdown("## 📜 Arquivos encontrados")
+    md_files = list(fundamentos_dir.glob("*.md"))
 
-        for arquivo in fundamentos_dir.glob("*.py"):
-            with st.expander(arquivo.name):
-                conteudo = arquivo.read_text(encoding="utf-8")
-                st.code(conteudo, language="python")
-                
+    # Se ambas vazias
+    if not py_files and not md_files:
+        st.info("Em breve teremos conteúdo para compartilhar!")
+    
+    # ---------- SEÇÃO DE MARKDOWN ----------
+    if md_files:
         st.markdown("## 📄 Documentação em Markdown")
-        
-        for arquivo_md in fundamentos_dir.glob("*.md"):
+        for arquivo_md in md_files:
             with st.expander(arquivo_md.name):
                 conteudo_md = arquivo_md.read_text(encoding="utf-8")
                 st.markdown(conteudo_md)
+
+    # ---------- SEÇÃO DE ARQUIVOS PYTHON ----------
+    if py_files:
+        st.markdown("## 📜 Arquivos Python")
+        for arquivo_py in py_files:
+            with st.expander(arquivo_py.name):
+                conteudo_py = arquivo_py.read_text(encoding="utf-8")
+                st.code(conteudo_py, language="python")
+    else:
+        st.info("Nenhum arquivo Python criado até o momento.")
+        
+

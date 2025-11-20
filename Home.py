@@ -131,6 +131,8 @@ for pasta in pastas:
     p = base / pasta
     if p.exists():
         arquivos = list(p.glob("*.py"))
+        arquivos_md = list(p.glob("*.md"))
+        arquivos.extend(arquivos_md)
         with st.expander(f"{pasta.capitalize()} — {len(arquivos)} arquivo(s)"):
             if arquivos:
                 for arq in arquivos:

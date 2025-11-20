@@ -30,12 +30,14 @@ def render_sidebar():
         st.subheader("Sinta-se à vontade para conectar!")
         
         st.html("""
-                 <a class="links-contatos" href="https://github.com/AldomarAssolin" target="_blank">
+                <div class="links-contatos">
+                 <a href="https://github.com/AldomarAssolin" target="_blank">
                      <img src="https://img.shields.io/badge/GitHub-AldomarAssolin-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Badge">
                  </a>
-                    <a class="links-contatos" href="https://linkedin.com/in/aldomarassolin" target="_blank">
+                    <a href="https://linkedin.com/in/aldomarassolin" target="_blank">
                         <img src="https://img.shields.io/badge/LinkedIn-AldomarAssolin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge">
                     </a>
+                </div>
                  """)
 
         st.markdown("---")

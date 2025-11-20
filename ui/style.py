@@ -34,9 +34,15 @@ def styles():
         color: #fff;
     }
     .links-contatos{
-        margin-right: 0.5rem;
-        display: inline-block;
-        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .links-contatos a {
+        text-decoration: none;
+    }
+    .links-contatos a img {
+        margin: 0.5rem;
+        border-radius: 8px;
     }
     </style>
     """,

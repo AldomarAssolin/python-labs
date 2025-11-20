@@ -1,7 +1,12 @@
 # pages/001_Fundamentos.py
 import streamlit as st
 from pathlib import Path
+from ui.sidebar import render_sidebar
 
+# ---- SIDEBAR ----
+render_sidebar()
+
+# ---- CONTEÚDO DA PÁGINA ----
 st.title("🧩 Fundamentos de Python")
 
 fundamentos_dir = Path("fundamentos")

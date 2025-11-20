@@ -1,7 +1,12 @@
 # pages/003_Algoritmos.py
 import streamlit as st
 from pathlib import Path
+from ui.sidebar import render_sidebar
 
+# ---- SIDEBAR ----
+render_sidebar()
+
+# ---- CONTEÚDO DA PÁGINA ----
 st.title("⚙️ Algoritmos")
 
 alg_dir = Path("algoritmos")

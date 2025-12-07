@@ -26,7 +26,7 @@ st.write(
 # --- configuração da lista ---
 st.markdown("### ⚙️ Configuração")
 
-tamanho = st.slider("Tamanho da lista (1 até N)", min_value=10, max_value=100, value=30, step=10)
+tamanho = st.slider("Tamanho da lista (1 até N)", min_value=10, max_value=1000, value=30, step=10)
 lista = list(range(1, tamanho + 1))
 
 item = st.number_input(

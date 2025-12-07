@@ -134,6 +134,7 @@ for pasta in pastas:
         arquivos_md = list(p.glob("*.md"))
         arquivos.extend(arquivos_md)
         with st.expander(f"{pasta.capitalize()} — {len(arquivos)} arquivo(s)"):
+            st.markdown('📤' + f'<a href="{pasta.capitalize()}" target="_blank">Abrir {pasta.upper()}</a>', unsafe_allow_html=True)
             if arquivos:
                 for arq in arquivos:
                     st.text(f"• {arq.name}")

@@ -125,7 +125,7 @@ st.markdown("---")
 st.markdown('<div class="section-title">📂 Estrutura do laboratório (autoatualizada)</div>', unsafe_allow_html=True)
 
 base = Path(__file__).resolve().parent
-pastas = ["fundamentos", "listas","algoritmos", "projetos"]  # ajuste aqui conforme seu repo
+pastas = ["fundamentos", "listas", "tuplas","algoritmos", "projetos"]  # ajuste aqui conforme seu repo
 
 for pasta in pastas:
     p = base / pasta

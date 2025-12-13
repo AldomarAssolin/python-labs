@@ -5,32 +5,6 @@ Limpando dados de engajamento de mídia social usando pandas.
 
 """
 
-"""
-# ===============================
-# Abas principais
-# ===============================
-tab_principal, tab_exemplos, tab_docs = st.tabs(
-    ["📘 Principal", "🧪 Exemplos Práticos", "📚 Docs"]
-)
-
-# ===============================
-# Aba 1 - Principal
-# ===============================
-with tab_principal:
-    
-
-# ===============================
-# Aba 2 - Exemplos Práticos
-# ===============================
-with tab_exemplos: 
-    
-# ===============================
-# Aba 3 - Documentação
-# ===============================
-with tab_docs:
-
-"""
-
 import pandas as pd
 import os
 

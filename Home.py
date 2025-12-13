@@ -9,7 +9,7 @@ st.set_page_config(
     page_title="Python Labs",
     page_icon="🧠",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="expanded"
 )
 
 # ---- SIDEBAR ----
@@ -19,7 +19,6 @@ render_sidebar()
 styles()
 
 # ---- CABEÇALHO ----
-
 st.markdown('<div class="title-highlight">Olá! Sou Aldomar Assolin</div>', unsafe_allow_html=True)
 st.markdown('<div class="big-title">🧠 Python Labs – Minha Jornada em Python & IA</div>', unsafe_allow_html=True)
 st.markdown(
@@ -125,7 +124,7 @@ st.markdown("---")
 st.markdown('<div class="section-title">📂 Estrutura do laboratório (autoatualizada)</div>', unsafe_allow_html=True)
 
 base = Path(__file__).resolve().parent
-pastas = ["fundamentos", "listas", "tuplas","algoritmos", "projetos"]  # ajuste aqui conforme seu repo
+pastas = ["fundamentos", "listas", "tuplas", "dicionarios", "algoritmos", "projetos"]  # ajuste aqui conforme seu repo
 
 for pasta in pastas:
     p = base / pasta

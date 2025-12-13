@@ -11,21 +11,22 @@ import os
 BASE_DIR = os.path.dirname(__file__)
 CSV_PATH = os.path.join(BASE_DIR, "..", "docs", "social_media_engagement_data.csv")
 
-raw = pd.read_csv(CSV_PATH, header=None)
+raw = pd.read_csv(CSV_PATH, sep=";", header=None)
 
-# pega só as colunas 1 e 2 (data e impressões)
-df = raw.iloc[:, 1:3].copy()
+# acha a linha onde está 'DATE'
+header_row = raw[raw[1] == "DATE"].index[0]
+
+# pega só as 3 primeiras colunas a partir do header
+data = raw.iloc[header_row:, :3].reset_index(drop=True)
 
 # primeira linha vira cabeçalho
-df.columns = df.iloc[0]      # linha 0 = ["DATE", "DAILY IMPRESSIONS"]
-df = df[1:]                  # remove linha do header
+data.columns = data.iloc[0]
+data = data[1:]
 
 # ajusta tipos
-df["DATE"] = pd.to_datetime(df["DATE"])
-df["DAILY IMPRESSIONS"] = pd.to_numeric(df["DAILY IMPRESSIONS"])
+data["DATE"] = pd.to_datetime(data["DATE"], dayfirst=True)
+data["DAILY IMPRESSIONS"] = pd.to_numeric(data["DAILY IMPRESSIONS"])
 
-print("Limpo:")
-print(df.head())
-
-df.to_csv("social_media_engagement_data.csv", index=False)
-print("Arquivo limpo salvo: social_media_engagement_data.csv")
+OUTPUT_PATH = os.path.join(BASE_DIR, "..", "docs", "social_media_clean.csv")
+data.to_csv(OUTPUT_PATH, index=False)
+print("Arquivo limpo salvo: social_media_clean.csv")

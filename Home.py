@@ -72,6 +72,7 @@ with col3:
         "Construir uma base sólida para depois entrar em análise de dados, ML, DL e MLOps."
     )
 
+st.markdown("""---""")
 # ---- SEÇÕES EXPLICATIVAS ----
 st.markdown('<div class="section-title">📘 O que estou estudando agora</div>', unsafe_allow_html=True)
 st.write(

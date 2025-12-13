@@ -45,14 +45,14 @@ with tab_principal:
 ---
 
 ## 🧩 Conteúdos que serão implementados aqui
-- [ ] Busca linear  
-- [ ] Busca binária  
-- [ ] Ordenação por seleção  
-- [ ] Recursão  
-- [ ] Dividir para conquistar  
-- [ ] Tabelas hash  
-- [ ] Grafos (conceitos iniciais)  
-- [ ] BFS / Dijkstra (conceitos introdutórios)  
+✅ Busca linear      
+✅ Busca binária     
+⬜ Ordenação por seleção      
+⬜ Recursão      
+⬜ Dividir para conquistar   
+⬜ Tabelas hash      
+⬜ Grafos (conceitos iniciais)    
+⬜ BFS / Dijkstra (conceitos introdutórios)      
 
 Cada algoritmo terá:
 - Implementação em Python  

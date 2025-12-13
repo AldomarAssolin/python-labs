@@ -7,6 +7,8 @@ Cálculo do fatorial de um número usando função recursiva em Python.
 import streamlit as st
 
 
+# Calculo Fatorial
+
 def fatorial(n):
     """Calcula o fatorial de n de forma recursiva."""
     if n == 0 or n == 1:

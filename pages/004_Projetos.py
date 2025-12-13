@@ -6,7 +6,7 @@ import pandas as pd
 from ui.sidebar import render_sidebar
 
 BASE_DIR = os.path.dirname(__file__)
-CLEAN_PATH = os.path.join(BASE_DIR, "..", "docs", "social_media_engagement_data.csv")
+CLEAN_PATH = os.path.join(BASE_DIR, "..", "docs", "social_media_clean.csv")
 
 # ---- SIDEBAR ----
 render_sidebar()

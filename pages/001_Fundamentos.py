@@ -30,79 +30,79 @@ with tab_principal:
 
 ---
 
-## ✅ Estrutura Básica do Python
-- [ ] Revisar sintaxe geral do Python  
-- [ ] Criar exemplo padrão usando `def main()`  
-- [ ] Entrada e saída (`input()` e `print()`)
+## 🔃 Estrutura Básica do Python
+ ✅ Revisar sintaxe geral do Python  
+ ✅ Criar exemplo padrão usando `def main()`  
+ ✅ Entrada e saída (`input()` e `print()`)
 
 ---
 
 ## 🔤 Variáveis e Tipos de Dados
-- [ ] Criar exemplos de tipos primitivos (int, float, str, bool)
-- [ ] Conversão de tipos (`int()`, `float()`, `str()`)
-- [ ] Comentários e boas práticas simples
+ ✅ Criar exemplos de tipos primitivos (int, float, str, bool)  
+ ✅ Conversão de tipos (`int()`, `float()`, `str()`)    
+ ✅ Comentários e boas práticas simples 
 
 ---
 
 ## 🔄 Estruturas de Controle
 ### Condicionais
-- [ ] `if`, `elif`, `else`
-- [ ] Operadores lógicos (`and`, `or`, `not`)
-- [ ] Comparações (`==`, `!=`, `>=`, etc.)
+ ✅ `if`, `elif`, `else`    
+ ✅ Operadores lógicos (`and`, `or`, `not`)     
+ ✅ Comparações (`==`, `!=`, `>=`, etc.)        
 
 ### Loops
-- [ ] `for` com listas e ranges
-- [ ] `while` (com controle seguro)
-- [ ] `break` e `continue`
+ ✅ `for` com listas e ranges   
+ ✅ `while` (com controle seguro)   
+ ✅ `break` e `continue`    
 
 ---
 
 ## 📦 Estruturas de Dados
-- [ ] Listas (criação, acesso, métodos)
-- [ ] Tuplas (imutabilidade)
-- [ ] Dicionários (chave/valor)
-- [ ] Sets (conjuntos)
+ ✅ Listas (criação, acesso, métodos)   
+ ✅ Tuplas (imutabilidade)  
+ ✅ Dicionários (chave/valor)   
+ ⬜ Sets (conjuntos) 
 
 ---
 
 ## 🧠 Funções
-- [ ] Funções simples
-- [ ] Parâmetros e retorno
-- [ ] Argumentos nomeados
-- [ ] Valores padrão
-- [ ] Funções dentro de funções
-- [ ] `lambda`
+ ⬜ Funções simples  
+ ⬜ Parâmetros e retorno     
+ ⬜ Argumentos nomeados  
+ ⬜ Valores padrão   
+ ⬜ Funções dentro de funções    
+ ⬜ `lambda` 
 
 ---
 
 ## 🧱 Introdução à POO
-- [ ] Criar primeira classe
-- [ ] Atributos e métodos
-- [ ] `__init__`
-- [ ] Instância de objeto
-- [ ] Exercício prático simples
+ ⬜ Criar primeira classe    
+ ⬜ Atributos e métodos  
+ ⬜ `__init__`   
+ ⬜ Instância de objeto  
+ ⬜ Exercício prático simples    
 
 ---
 
 ## ⚠️ Tratamento de Exceções
-- [ ] `try / except`
-- [ ] `finally`
-- [ ] Trabalhar com erros reais (ex: divisão por zero)
+ ⬜ `try / except`   
+ ⬜ `finally`    
+ ⬜ Trabalhar com erros reais (ex: divisão por zero) 
 
 ---
 
 ## 📁 Manipulação de Arquivos
-- [ ] Ler arquivos texto
-- [ ] Escrever arquivos
-- [ ] `with open()` (context manager)
+ ⬜ Ler arquivos texto   
+ ⬜ Escrever arquivos    
+ ⬜ `with open()` (context manager)  
 
 ---
 
 ## 🏁 Mini Projetos (Fundamentos)
-- [ ] Calculadora simples
-- [ ] Sistema básico de cadastro (lista/dicionário)
-- [ ] Conversor de temperatura
-- [ ] Simulador de lista de compras
+ ⬜ Calculadora simples  
+ ⬜ Sistema básico de cadastro (lista/dicionário)    
+ ⬜ Conversor de temperatura     
+ ⬜ Simulador de lista de compras    
 
 ---
 
@@ -174,40 +174,54 @@ with tab_exemplos:
 
         st.markdown("---")
         st.caption("Exemplo de conversão de `input()` no terminal para interface web com Streamlit.")
+            
+
+    st.markdown("---")
+    # Calculo Fatorial
+    def fatorial(n):
+        """Calcula o fatorial de n de forma recursiva."""
+        if n == 0 or n == 1:
+            return 1
+        else:
+            return n * fatorial(n - 1)
         
-# Calculo Fatorial
+    st.title("📚 Cálculo do Fatorial em Python")
+    st.markdown("""
+                >Problema clássico em programação é o cáclculo do fatorial. Ele é utilizado em estatística para calcular permutações e combinações de conjuntos.
+                >O cálculo é simples e por isso muito utilizado como exemplo em cursos de programação.
+                
+                ### Para calcular o fatorial, multiplicamos o número por todos os números que precedem até chegarmos em 1.
+                
+                _Um caso especial é o fatorial de 0, que por definição é 1._
+                ```bash
+                Ex.:
+                5! = 5 × 4 × 3 × 2 × 1 = 120
+                0! = 1
+                ```
+                """)
 
-def fatorial(n):
-    """Calcula o fatorial de n de forma recursiva."""
-    if n == 0 or n == 1:
-        return 1
-    else:
-        return n * fatorial(n - 1)
-    
-st.title("📚 Cálculo do Fatorial em Python")
+    numero = st.number_input(
+        "Digite um número inteiro não negativo para calcular o fatorial:",
+        min_value=0,
+        value=5,
+        step=1
+    )
 
-numero = st.number_input(
-    "Digite um número inteiro não negativo para calcular o fatorial:",
-    min_value=0,
-    value=5,
-    step=1
-)
+    if st.button("Calcular Fatorial"):
+        resultado = fatorial(numero)
+        st.success(f"O fatorial de {numero} é {resultado}.")
+        
+    st.info("""
+    O fatorial de um número n (denotado como n!) é o produto de todos os inteiros positivos de 1 até n.
+    Por definição, o fatorial de 0 é 1 (0! = 1).
+    O fatorial é amplamente utilizado em matemática, estatística e ciência da computação, especialmente em combinações e permutações.
+    """)
 
-if st.button("Calcular Fatorial"):
-    resultado = fatorial(numero)
-    st.success(f"O fatorial de {numero} é {resultado}.")
-    
-st.info("""
-O fatorial de um número n (denotado como n!) é o produto de todos os inteiros positivos de 1 até n.
-Por definição, o fatorial de 0 é 1 (0! = 1).
-O fatorial é amplamente utilizado em matemática, estatística e ciência da computação, especialmente em combinações e permutações.
-""")
-
-# Exemplo de uso da função
-st.subheader("Exemplos de Fatorial")
-exemplos = [0, 1, 5, 7, 10]
-for ex in exemplos:
-    st.write(f"{ex}! = {fatorial(ex)}") 
+    # Exemplo de uso da função
+    st.subheader("Exemplos de Fatorial")
+    exemplos = [0, 1, 5, 7, 10]
+    for ex in exemplos:
+        st.write(f"{ex}! = {fatorial(ex)}") 
     
 # ===============================
 # Aba 3 - Exercícios Guiados

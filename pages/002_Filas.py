@@ -55,6 +55,7 @@ with tab_principal:
 
     # ---- CÓDIGO DE EXEMPLO (VERSÃO TERMINAL / LÓGICA) ----
     code_snippet = '''
+    
     menu_options = {
         1: "Normal",
         2: "Prioritario",
@@ -91,8 +92,12 @@ with tab_principal:
         cliente = fila.pop(0)  # FIFO
         print(f"Atendendo: {cliente['tipo']} - Senha {cliente['senha']}")
         return cliente
+    
     '''
-    display_code_snippet(code_snippet)
+    
+    with st.expander("Veja o código"):
+        display_code_snippet(code_snippet)
+    
 
     st.write(
         """

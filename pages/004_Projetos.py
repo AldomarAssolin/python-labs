@@ -4,9 +4,14 @@ from pathlib import Path
 import os
 import pandas as pd
 from ui.sidebar import render_sidebar
+from typing import Dict, List
+import csv
+from streamlit_card import card
 
 BASE_DIR = os.path.dirname(__file__)
-CLEAN_PATH = os.path.join(BASE_DIR, "..", "docs", "social_media_clean.csv")
+CLEAN_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "social_media_clean.csv"))
+LIB_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "library_books.csv"))
+IMAGEM_CARD = os.path.abspath(os.path.join(BASE_DIR, "..", "public", "images", "thumb.png"))
 
 # ---- SIDEBAR ----
 render_sidebar()
@@ -17,14 +22,14 @@ st.title("🧩 Projetos em Python")
 # ===============================
 # Abas principais
 # ===============================
-tab_conceitos, tab_exemplos, tab_exercicios = st.tabs(
+tab_principal, tab_exemplos, tab_docs = st.tabs(
     ["📘 Principal", "🧪 Exemplos Práticos", "📚 Docs"]
 )
 
 # ===============================
-# Aba 1 - Conceitos
+# Aba 1 - Principal
 # ===============================
-with tab_conceitos:
+with tab_principal:
     st.markdown("""
                 # 🚀 Projetos – Python Labs
 
@@ -95,10 +100,28 @@ with tab_exemplos:
         stack=False
     )
     
+    # Livraria
+    
+    # Lista todos os livros
+    def lista_todos_livros(caminho) -> List[Dict]:
+        if not os.path.exists(caminho):
+            return []
+        
+        with open(caminho, "r", newline="", encoding="utf-8") as arquivo:
+            reader = csv.DictReader(arquivo)
+            return list(reader)
+
+    livros = lista_todos_livros(LIB_PATH)
+
+    df = pd.DataFrame(livros)
+
+    st.header("📚 Catálogo de Livros (Exemplo)")
+    st.dataframe(df, use_container_width=True)
+
 # ===============================
-# Aba 3 - Exercícios Guiados
+# Aba 3 - Documentacao
 # ===============================
-with tab_exercicios:
+with tab_docs:
     projetos_dir = Path("projetos")
 
     if not projetos_dir.exists():

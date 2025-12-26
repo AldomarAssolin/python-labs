@@ -7,10 +7,14 @@ if (!(Test-Path ".\.venv\Scripts\Activate.ps1")) {
 
 . .\.venv\Scripts\Activate.ps1
 
-if (-not $env:STREAMLIT_SERVER_PORT) { $env:STREAMLIT_SERVER_PORT = "8501" }
-if (-not $env:STREAMLIT_SERVER_ADDRESS) { $env:STREAMLIT_SERVER_ADDRESS = "8501"}
+# Defaults (trata vazio e espaços)
+if ([string]::IsNullOrWhiteSpace($env:STREAMLIT_SERVER_PORT)) { $env:STREAMLIT_SERVER_PORT = "8501" }
+if ([string]::IsNullOrWhiteSpace($env:STREAMLIT_SERVER_ADDRESS)) { $env:STREAMLIT_SERVER_ADDRESS = "127.0.0.1" }
 
-Write-Host "Iniciando Python-Labs em $env:STREAMLIT_SERVER_ADDRESS:$env:STREAMLIT_SERVER_PORT"
+# Debug explícito
+Write-Host "ADDR=[$($env:STREAMLIT_SERVER_ADDRESS)] PORT=[$($env:STREAMLIT_SERVER_PORT)]"
+
+Write-Host "Iniciando Python-Labs em $($env:STREAMLIT_SERVER_ADDRESS):$($env:STREAMLIT_SERVER_PORT)"
 
 streamlit run app.py `
   --server.address $env:STREAMLIT_SERVER_ADDRESS `

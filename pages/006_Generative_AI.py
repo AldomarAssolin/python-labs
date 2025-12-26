@@ -8,6 +8,8 @@ from ui.style import styles
 # Carrega variáveis de ambiente
 load_dotenv()
 
+
+
 st.header("Estudando conexão com IA Generativa")
 
 
@@ -47,6 +49,26 @@ tab_principal, tab_exemplos, tab_docs = st.tabs(
 # ===============================
 with tab_principal:
 
+    # 1. Feature flag
+    if os.getenv("ENABLE_AI") != "true":
+        st.stop()
+
+    # 2. Senha
+    def require_password():
+        pwd = st.text_input("Senha", type="password")
+        if pwd != os.getenv("AI_ACCESS_PASSWORD"):
+            st.stop()
+
+    require_password()
+
+    # 3. Rate limit
+    if "ai_calls" not in st.session_state:
+        st.session_state.ai_calls = 0
+
+    if st.session_state.ai_calls >= 5:
+        st.stop()
+
+    st.session_state.ai_calls += 1
 
     # Cliente OpenAI
     client = OpenAI(

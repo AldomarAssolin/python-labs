@@ -71,7 +71,9 @@ Cada projeto tem seu próprio diretório:
 # ===============================
 # Aba 2 - Exemplos Práticos
 # ===============================
-with tab_exemplos:            
+with tab_exemplos:   
+    
+    # Social Media analises         
     st.set_page_config(page_title="Social Media Analytics", layout="wide")
 
     st.title("📊 Social Media Engagement")

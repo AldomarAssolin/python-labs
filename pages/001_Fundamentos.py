@@ -177,6 +177,7 @@ with tab_exemplos:
             
 
     st.markdown("---")
+    
     # Calculo Fatorial
     def fatorial(n):
         """Calcula o fatorial de n de forma recursiva."""
@@ -195,7 +196,7 @@ with tab_exemplos:
                 _Um caso especial é o fatorial de 0, que por definição é 1._
                 ```bash
                 Ex.:
-                5! = 5 × 4 × 3 × 2 × 1 = 120
+                5! = 5 x 4 x 3 x 2 x 1 = 120
                 0! = 1
                 ```
                 """)
@@ -223,6 +224,83 @@ with tab_exemplos:
     for ex in exemplos:
         st.write(f"{ex}! = {fatorial(ex)}") 
     
+    st.divider() 
+    
+    # Tempo de entrega de delivery (Basico)
+    import streamlit as st
+    import time
+
+    option = ""
+    options = ["Macdonalds", "Burguer Kings", "KFC", "Sair"]
+
+    def header():
+        st.header("🛵 Verifique o tempo de entrega dos restaurantes.")
+        
+    def choice(option):
+        option_selected = st.selectbox(
+            "Escolha o restaurante!",
+            (options),
+        )
+        option = option_selected
+        return option
+
+    def footer():
+        st.markdown("""
+                    
+                    Feito com muito ❤ por **Aldomar Assolin**
+                    
+                    """)
+
+    def response(restaurant_name: str, delivery_time: int) -> None:
+        st.caption("Resturante: " + restaurant_name)
+        st.caption("Tempo de entrega: " + str(delivery_time) + "min")
+
+
+    def main():
+        
+        restaurant_name = ''
+        delivery_time = 0
+        
+        header()
+        st.divider()
+        decision = choice(option)
+        st.space()
+        
+        while True:
+            if decision == "Macdonalds":
+                restaurant_name = decision
+                delivery_time = 35
+                response(restaurant_name,delivery_time)
+                break
+            elif decision == "Burguer Kings":
+                restaurant_name = decision
+                delivery_time = 30
+                response(restaurant_name,delivery_time)
+                break
+            elif decision == "KFC":
+                restaurant_name = decision
+                delivery_time = 20
+                response(restaurant_name,delivery_time)
+                break
+            elif decision == "Sair":
+                with st.spinner("Processando...", show_time=False):
+                    time.sleep(3)
+                st.info("Volte sempre!!!")
+                break
+            else:
+                with st.spinner("Processando...", show_time=False):
+                    time.sleep(3)
+                st.error("Opss! Escolha uma opção válida!")
+                break
+
+            
+        
+        st.divider()
+        footer()
+        
+    # ponto de entrada do programa recomendado
+    if __name__ == "__main__":
+        main()
 # ===============================
 # Aba 3 - Exercícios Guiados
 # ===============================

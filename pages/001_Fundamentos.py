@@ -3,11 +3,34 @@ import streamlit as st
 from pathlib import Path
 from datetime import datetime, date
 from ui.sidebar import render_sidebar
+from ui.style import styles
+from ui.footer import footer
+from ui.header import header
 
 # ---- SIDEBAR ----
 render_sidebar()
 
+# ---- ESTILO BÁSICO (CSS SIMPLES) ----
+styles()
+
+# ===============================
+# Header
+# ===============================
+header()
+
+# ===============================
+# CONFIGURAÇÕES DA PÁGINA
+# ===============================
+
+st.set_page_config(
+    page_title="Fundamentos",
+    page_icon="🧩",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 # ---- CONTEÚDO DA PÁGINA ----
+# ------ Titulo ------
 st.title("🧩 Fundamentos de Python")
 
 # ===============================
@@ -244,13 +267,6 @@ with tab_exemplos:
         option = option_selected
         return option
 
-    def footer():
-        st.markdown("""
-                    
-                    Feito com muito ❤ por **Aldomar Assolin**
-                    
-                    """)
-
     def response(restaurant_name: str, delivery_time: int) -> None:
         st.caption("Resturante: " + restaurant_name)
         st.caption("Tempo de entrega: " + str(delivery_time) + "min")
@@ -296,7 +312,7 @@ with tab_exemplos:
             
         
         st.divider()
-        footer()
+
         
     # ponto de entrada do programa recomendado
     if __name__ == "__main__":
@@ -336,4 +352,7 @@ with tab_docs:
         else:
             st.info("Nenhum arquivo Python criado até o momento.")
             
-
+# ===============================
+# Footer
+# ===============================
+footer()

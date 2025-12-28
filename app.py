@@ -3,6 +3,8 @@ import streamlit as st
 from pathlib import Path
 from ui.sidebar import render_sidebar
 from ui.style import styles
+from ui.footer import footer
+from ui.header import header
 
 # ---- CONFIGURAÇÕES DA PÁGINA ----
 st.set_page_config(
@@ -19,12 +21,7 @@ render_sidebar()
 styles()
 
 # ---- CABEÇALHO ----
-st.markdown('<div class="title-highlight">Olá! Sou Aldomar Assolin</div>', unsafe_allow_html=True)
-st.markdown('<div class="big-title">🧠 Python Labs – Minha Jornada em Python & IA</div>', unsafe_allow_html=True)
-st.markdown(
-    '<div class="subtitle">Um laboratório vivo. Um estudo contínuo. Um dev em construção.</div>',
-    unsafe_allow_html=True,
-)
+header()
 
 
 st.write(
@@ -143,9 +140,4 @@ for pasta in pastas:
     else:
         st.write(f"**{pasta.capitalize()}** — (pasta ainda não criada)")
 
-# ---- RODAPÉ SIMPLES ----
-st.markdown("---")
-st.caption(
-    "Este laboratório é um registro da minha evolução como desenvolvedor. "
-    "Nada aqui está “finalizado”: tudo está em construção — assim como eu."
-)
+footer()

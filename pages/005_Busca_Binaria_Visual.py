@@ -1,20 +1,33 @@
 import streamlit as st
 import time
-from ui.sidebar import render_sidebar   # se você já estiver usando
-from ui.style import styles             # se tiver função de estilos
+from ui.sidebar import render_sidebar
+from ui.style import styles
+from ui.footer import footer
+from ui.header import header
 
-# aplica estilos globais (se você tiver)
-try:
-    st.markdown(styles(), unsafe_allow_html=True)
-except Exception:
-    pass
+# ---- SIDEBAR ----
+render_sidebar()
 
-# sidebar padrão do Python Labs
-try:
-    render_sidebar()
-except Exception:
-    pass
+# ---- ESTILO BÁSICO (CSS SIMPLES) ----
+styles()
 
+# ===============================
+# Header
+# ===============================
+header()
+
+# ===============================
+# CONFIGURAÇÕES DA PÁGINA
+# ===============================
+
+st.set_page_config(
+    page_title="Busca Binaria",
+    page_icon="🔍",
+    layout="wide",
+)
+
+# ---- CONTEÚDO DA PÁGINA ----
+# ------ Titulo ------
 st.title("🔍 Visualizador de Busca Binária")
 st.write(
     """
@@ -122,3 +135,7 @@ if st.button("▶ Executar busca binária"):
 else:
     st.info("Configure a lista e clique em **Executar busca binária** para ver os passos.")
 
+# ===============================
+# Footer
+# ===============================
+footer()

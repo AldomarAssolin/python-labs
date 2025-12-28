@@ -3,12 +3,35 @@ import streamlit as st
 from pathlib import Path
 import pandas as pd
 from ui.sidebar import render_sidebar
+from ui.style import styles
+from ui.footer import footer
+from ui.header import header
 
 # ---- SIDEBAR ----
 render_sidebar()
 
+# ---- ESTILO BÁSICO (CSS SIMPLES) ----
+styles()
+
+# ===============================
+# Header
+# ===============================
+header()
+
+# ===============================
+# CONFIGURAÇÕES DA PÁGINA
+# ===============================
+
+st.set_page_config(
+    page_title="Listas",
+    page_icon="📋",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 # ---- CONTEÚDO DA PÁGINA ----
-st.title("🧩 Listas em Python")
+# ------ Titulo ------
+st.title("📋 Listas em Python")
 st.write(
     """
 Neste exemplo, vamos simular o atendimento em uma fila de banco utilizando **listas em Python**.
@@ -333,4 +356,7 @@ with tab_docs:
         else:
             st.info("Nenhum arquivo Python criado até o momento.")
 
-            
+# ===============================
+# Footer
+# ===============================
+footer()            

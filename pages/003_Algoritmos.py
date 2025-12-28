@@ -3,12 +3,34 @@ import streamlit as st
 from pathlib import Path
 import time
 from ui.sidebar import render_sidebar
+from ui.style import styles
+from ui.footer import footer
+from ui.header import header
 
 # ---- SIDEBAR ----
 render_sidebar()
 
+# ---- ESTILO BÁSICO (CSS SIMPLES) ----
+styles()
+
+# ===============================
+# Header
+# ===============================
+header()
+
+# ===============================
+# CONFIGURAÇÕES DA PÁGINA
+# ===============================
+
+st.set_page_config(
+    page_title="Algoritmos",
+    page_icon="〽",
+    layout="wide",
+)
+
 # ---- CONTEÚDO DA PÁGINA ----
-st.title("⚙️ Algoritmos – Python Labs")
+# ------ Titulo ------
+st.title("〽 Algoritmos – Python Labs")
 st.subheader("Este diretório faz parte da minha jornada de evolução em Python e Inteligência Artificial.")
 st.markdown("""
             >Aqui estudo, implemento e documento algoritmos essenciais para desenvolver meu raciocínio lógico e minha base como programador. 
@@ -218,3 +240,7 @@ with tab_docs:
         else:
             st.info("Nenhum arquivo Python criado até o momento.")
             
+# ===============================
+# Footer
+# ===============================
+footer()

@@ -16,6 +16,6 @@ Write-Host "ADDR=[$($env:STREAMLIT_SERVER_ADDRESS)] PORT=[$($env:STREAMLIT_SERVE
 
 Write-Host "Iniciando Python-Labs em $($env:STREAMLIT_SERVER_ADDRESS):$($env:STREAMLIT_SERVER_PORT)"
 
-streamlit run app.py `
+streamlit run App.py `
   --server.address $env:STREAMLIT_SERVER_ADDRESS `
   --server.port $env:STREAMLIT_SERVER_PORT

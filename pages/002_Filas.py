@@ -10,6 +10,9 @@ import streamlit as st
 from ui.style import styles
 from ui.sidebar import render_sidebar
 from ui.code_display import display_code_snippet
+from ui.footer import footer
+from ui.header import  header
+
 
 # ---- CONFIGURAÇÕES DA PÁGINA ----
 st.set_page_config(
@@ -25,7 +28,24 @@ render_sidebar()
 # ---- ESTILO BÁSICO (CSS SIMPLES) ----
 styles()
 
-# ---- CABEÇALHO DA PÁGINA ----
+# ===============================
+# Header
+# ===============================
+header()
+
+# ===============================
+# CONFIGURAÇÕES DA PÁGINA
+# ===============================
+
+st.set_page_config(
+    page_title="Filas",
+    page_icon="🧑‍🤝‍🧑",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# ---- CONTEÚDO DA PÁGINA ----
+# ------ Titulo ------
 st.markdown(
     '<div class="big-title">📋 Utilizando Listas como Filas em Python</div>',
     unsafe_allow_html=True,
@@ -126,7 +146,7 @@ with tab_principal:
         '<div class="section-title">🏠 Voltar para a página inicial</div>',
         unsafe_allow_html=True,
     )
-    st.page_link("Home.py", label="Home", icon="🏠")
+    st.page_link("app.py", label="app", icon="🏠")
 
     st.markdown("---")
     st.markdown(
@@ -134,12 +154,6 @@ with tab_principal:
         unsafe_allow_html=True,
     )
     st.page_link("pages/002_Listas.py", label="Listas", icon="📈")
-
-    st.markdown("---")
-    st.markdown(
-        '<div class="footer">Feito com ❤️ por Aldomar "Manex" Assolin</div>',
-        unsafe_allow_html=True,
-    )
 
 # ===============================
 # Aba 2 - Exemplos Práticos
@@ -249,4 +263,7 @@ with tab_docs:
         else:
             st.info("Nenhum arquivo Python criado até o momento.")
             
-    
+# ===============================
+# Footer
+# ===============================
+footer()    

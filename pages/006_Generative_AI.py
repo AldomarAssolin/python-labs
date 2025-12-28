@@ -4,19 +4,24 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from ui.sidebar import render_sidebar
 from ui.style import styles
+from ui.footer import footer
+from ui.header import header
 
-# Carrega variáveis de ambiente
-load_dotenv()
+# ---- SIDEBAR ----
+render_sidebar()
 
+# ---- ESTILO BÁSICO (CSS SIMPLES) ----
+styles()
 
-
-st.header("Estudando conexão com IA Generativa")
-
+# ===============================
+# Header
+# ===============================
+header()
 
 # ===============================
 # CONFIGURAÇÕES DA PÁGINA
 # ===============================
-# ----  ----
+
 st.set_page_config(
     page_title="IA Generativa",
     page_icon="🧠",
@@ -24,18 +29,12 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Carrega variáveis de ambiente
+load_dotenv()
 
-# ===============================
-# Sidebar
-# ===============================
-
-render_sidebar()
-
-# ===============================
-# ESTILO BÁSICO (CSS SIMPLES)
-# ===============================
-
-styles()
+# ---- CONTEÚDO DA PÁGINA ----
+# ------ Titulo ------
+st.header("Estudando conexão com IA Generativa")
 
 # ===============================
 # Abas principais
@@ -111,3 +110,8 @@ with tab_docs:
     st.info("""
     Aqui estudo, implemento e documento algoritmos essenciais para desenvolver meu raciocínio lógico e minha base como programador.
     """)
+    
+# ===============================
+# Footer
+# ===============================
+footer()

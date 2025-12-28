@@ -3,21 +3,43 @@ import streamlit as st
 from pathlib import Path
 import os
 import pandas as pd
-from ui.sidebar import render_sidebar
 from typing import Dict, List
 import csv
 from streamlit_card import card
+from ui.sidebar import render_sidebar
+from ui.style import styles
+from ui.footer import footer
+from ui.header import header
+
+# ---- SIDEBAR ----
+render_sidebar()
+
+# ---- ESTILO BÁSICO (CSS SIMPLES) ----
+styles()
+
+# ===============================
+# Header
+# ===============================
+header()
+
+# ===============================
+# CONFIGURAÇÕES DA PÁGINA
+# ===============================
+
+st.set_page_config(
+    page_title="Projetos",
+    page_icon="📅",
+    layout="wide",
+)
 
 BASE_DIR = os.path.dirname(__file__)
 CLEAN_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "social_media_clean.csv"))
 LIB_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "library_books.csv"))
 IMAGEM_CARD = os.path.abspath(os.path.join(BASE_DIR, "..", "public", "images", "thumb.png"))
 
-# ---- SIDEBAR ----
-render_sidebar()
-
 # ---- CONTEÚDO DA PÁGINA ----
-st.title("🧩 Projetos em Python")
+# ------ Titulo ------
+st.title("📅 Projetos em Python")
 
 # ===============================
 # Abas principais
@@ -154,4 +176,7 @@ with tab_docs:
                         st.code(conteudo, language="python")
         else:
             st.info("Nenhum arquivo Python criado até o momento.")
-    
+# ===============================
+# Footer
+# ===============================
+footer()    

@@ -6,37 +6,39 @@ Meu objetivo aqui é dominar a base do Python com exemplos simples, claros e fun
 ---
 
 ## ✅ Estrutura Básica do Python
-- ✅ Revisar sintaxe geral do Python  
-- ✅ Criar exemplo padrão usando `def main()`  
-- ✅ Entrada e saída (`input()` e `print()`)
+✅ Revisar sintaxe geral do Python  
+✅ Criar exemplo padrão usando `def main()`  
+✅ Entrada e saída (`input()` e `print()`)
+
+>hello.py
 
 ---
 
 ## 🔤 Variáveis e Tipos de Dados
-- ✅ Criar exemplos de tipos primitivos (int, float, str, bool)
-- ✅ Conversão de tipos (`int()`, `float()`, `str()`)
-- ✅ Comentários e boas práticas simples
+✅ Criar exemplos de tipos primitivos (int, float, str, bool)   
+✅ Conversão de tipos (`int()`, `float()`, `str()`)     
+✅ Comentários e boas práticas simples      
 
 ---
 
 ## 🔄 Estruturas de Controle
 ### Condicionais
-- ✅ `if`, `elif`, `else`
-- ✅ Operadores lógicos (`and`, `or`, `not`)
-- ✅ Comparações (`==`, `!=`, `>=`, etc.)
+✅ `if`, `elif`, `else`     
+✅ Operadores lógicos (`and`, `or`, `not`)      
+✅ Comparações (`==`, `!=`, `>=`, etc.)     
 
 ### Loops
-- ✅ `for` com listas e ranges
-- ✅ `while` (com controle seguro)
-- ✅ `break` e `continue`
+✅ `for` com listas e ranges        
+✅ `while` (com controle seguro)        
+✅ `break` e `continue`     
 
 ---
 
 ## 📦 Estruturas de Dados
-- ✅ Listas (criação, acesso, métodos)
-- ✅ Tuplas (imutabilidade)
-- ✅ Dicionários (chave/valor)
-- [ ] Sets (conjuntos)
+✅ Listas (criação, acesso, métodos)        
+✅ Tuplas (imutabilidade)       
+✅ Dicionários (chave/valor)        
+[ ] Sets (conjuntos)
 
 ---
 

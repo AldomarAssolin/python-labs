@@ -270,8 +270,7 @@ with tab_exemplos:
     def response(restaurant_name: str, delivery_time: int) -> None:
         st.caption("Resturante: " + restaurant_name)
         st.caption("Tempo de entrega: " + str(delivery_time) + "min")
-
-
+        
     def main():
         
         restaurant_name = ''
@@ -317,8 +316,72 @@ with tab_exemplos:
     # ponto de entrada do programa recomendado
     if __name__ == "__main__":
         main()
+
+    # Calculadora IMC (Basico)
+    st.header("⚖️ Calculadora de IMC")
+    st.markdown("""
+        O Índice de Massa Corporal (IMC) é uma medida utilizada para avaliar se uma pessoa está com peso adequado em relação à sua altura. 
+        Ele é calculado dividindo o peso da pessoa (em kg) pela altura ao quadrado (em metros). O resultado é um número que pode ser interpretado 
+        para determinar se a pessoa está abaixo do peso, com peso normal, sobrepeso ou obesidade.
+
+        ### Fórmula do IMC:
+        
+        ```bash
+        IMC = peso (kg) / (altura (m))^2
+        ```
+            
+        ### Classificação do IMC:
+        - Abaixo de 18,5: Abaixo do peso
+        - Entre 18,5 e 24,9: Peso normal
+        - Entre 25 e 29,9: Sobrepeso
+        - 30 ou acima: Obesidade
+        """)
+    st.caption("""
+            ### Observações:
+            - O IMC é uma medida simples e não leva em consideração fatores como massa muscular, distribuição de gordura ou outros aspectos da saúde.
+            - Para uma avaliação mais completa da saúde, é recomendado consultar um profissional de saúde.
+            """)
+    
+    def calcular_imc(peso: float, altura: float) -> float:
+        """Calcula o Índice de Massa Corporal (IMC) dado o peso e a altura."""
+        if altura <= 0:
+            raise ValueError("A altura deve ser maior que zero.")
+        imc = peso / (altura ** 2)
+        return imc
+    
+    def classificar_imc(imc: float) -> str:
+        """Classifica o IMC de acordo com as faixas estabelecidas."""
+        if imc < 18.5:
+            return "Abaixo do peso"
+        elif 18.5 <= imc < 25:
+            return "Peso normal"
+        elif 25 <= imc < 30:
+            return "Sobrepeso"
+        else:
+            return "Obesidade"
+        
+    with st.form("imc_form"):
+        peso = st.number_input("Digite seu peso em kg:", min_value=0.0, value=70.0, step=0.1)
+        altura = st.number_input("Digite sua altura em metros:", min_value=0.0, value=1.75, step=0.01)
+        submitted_imc = st.form_submit_button("Calcular IMC")
+        
+    if submitted_imc:
+        try:
+            imc_resultado = calcular_imc(peso, altura)
+            classificacao = classificar_imc(imc_resultado)
+            with st.spinner("Calculando...", show_time=False):
+                time.sleep(2)
+            st.success(f"Seu IMC é {imc_resultado:.2f}, o que é classificado como: {classificacao}.")
+            
+        except ValueError as e:
+            st.error(str(e))
+            
+    
+    
+
+
 # ===============================
-# Aba 3 - Exercícios Guiados
+# Aba 3 - Documentacao
 # ===============================
 with tab_docs:
     fundamentos_dir = Path("fundamentos")

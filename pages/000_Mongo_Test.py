@@ -12,4 +12,5 @@ st.title("MongoDB Test")
 #     st.success(f"Inserido: {inserted_id}")
 
 st.subheader("Últimos registros")
-st.write(list_healthchecks(10))
+st.caption("Página em construção...")
+# st.write(list_healthchecks(10))

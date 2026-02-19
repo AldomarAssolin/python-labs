@@ -33,6 +33,11 @@ def styles():
         background-color: #222;
         color: #fff;
     }
+    .folder-link {
+        text-decoration: none;
+        color: #4CAF50;
+        font-weight: 600;
+    }
     .links-contatos{
         display: flex;
         flex-direction: column;

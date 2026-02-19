@@ -1,3 +1,15 @@
+# header.py
+"""
+Docstring for ui.header
+
+Author: Aldomar Assolin
+Date: 2024-06-15
+Description: 
+This module defines the header component for the Streamlit application. 
+It includes a title, subtitle, and navigation links to different pages of the app.
+
+
+"""
 import streamlit as st
 
 def header():
@@ -8,6 +20,4 @@ def header():
         unsafe_allow_html=True,
     )
     
-    # Navigation
-    with st.container(width='stretch',height=60):
-        st.page_link("app.py",label="Home",icon="🏠")
+    

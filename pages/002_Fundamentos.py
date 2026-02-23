@@ -166,34 +166,31 @@ with tab_exemplos:
 
     if submitted:
         # validações simples
-        if " " in nickname:
-            st.error("O nickname não pode conter espaços.")
+        nome_fmt = nome.strip().title()
+        
+        if " " in nome or " " in nickname:
+            st.error("O nome ou nickname não pode conter espaços.")
         elif not nome or not sobrenome:
             st.error("Preencha nome e sobrenome.")
         else:
             # normalizações
-            nome_fmt = nome.strip().title()
             sobrenome_fmt = (
                 sobrenome.strip()
                 .title()
-                .replace(" De ", " de ")
-                .replace(" Da ", " da ")
-                .replace(" Dos ", " dos ")
-                .replace(" Das ", " das ")
             )
 
-        hoje = date.today()
-        idade = hoje.year - data_nasc.year - (
-            (hoje.month, hoje.day) < (data_nasc.month, data_nasc.day)
-        )
+            hoje = date.today()
+            idade = hoje.year - data_nasc.year - (
+                (hoje.month, hoje.day) < (data_nasc.month, data_nasc.day)
+            )
 
-        st.success("Cadastro concluído com sucesso!")
+            st.success("Cadastro concluído com sucesso!")
 
-        st.markdown("### ✅ Dados cadastrados")
-        st.write(f"**Nome:** {nome_fmt} {sobrenome_fmt}")
-        st.write(f"**Nickname:** {nickname}")
-        st.write(f"**Data de nascimento:** {data_nasc.strftime('%d/%m/%Y')}  (Idade: {idade} anos)")
-        st.write(f"**Data atual:** {hoje.strftime('%d/%m/%Y')}")
+            st.markdown("### ✅ Dados cadastrados")
+            st.write(f"**Nome:** {nome_fmt} {sobrenome_fmt}")
+            st.write(f"**Nickname:** {nickname}")
+            st.write(f"**Data de nascimento:** {data_nasc.strftime('%d/%m/%Y')}  (Idade: {idade} anos)")
+            st.write(f"**Data atual:** {hoje.strftime('%d/%m/%Y')}")
 
         st.markdown("---")
         st.caption("Exemplo de conversão de `input()` no terminal para interface web com Streamlit.")
@@ -279,7 +276,7 @@ with tab_exemplos:
         header()
         st.divider()
         decision = choice(option)
-        st.space()
+        # st.space()
         
         while True:
             if decision == "Macdonalds":

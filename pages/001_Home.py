@@ -1,6 +1,7 @@
 # app.py
 import streamlit as st
 from pathlib import Path
+from ui.navbar import navbar
 from ui.sidebar import render_sidebar
 from ui.style import styles
 from ui.footer import footer
@@ -24,6 +25,9 @@ styles()
 # ---- CABEÇALHO ----
 header()
 
+# ---- Nav ----
+navbar()
+
 
 st.write(
     """
@@ -44,6 +48,8 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+st.html("""<a href="/About" class="btn-links">Saiba mais sobre mim</a>""")
 
 st.markdown("---")
 
@@ -124,7 +130,7 @@ st.markdown('<div class="section-title">📂 Estrutura do laboratório (autoatua
 
 
 pastas = ["fundamentos", "listas", "tuplas", "dicionarios", "algoritmos", "projetos"]  # ajuste aqui conforme seu repo
-
+st.caption(f"Path: {BASE_DIR} — clicando na pasta, você vê os arquivos dentro dela.")
 for pasta in pastas:
     p = BASE_DIR / pasta
     if p.exists():
@@ -146,6 +152,30 @@ for pasta in pastas:
                     st.text(f"• {arq.name}")
             else:
                 st.write("Ainda não há arquivos nesta pasta.")
+st.divider()
+
+
+# ====== PROVAS / PROJETOS ======
+st.subheader("Projetos em destaque")
+st.write("Algumas coisas que eu venho construindo para aprender e gerar valor:")
+st.divider()
+p1, p2 = st.columns(2, gap="large")
+
+with p1:
+    st.markdown("### 🧠 Python Labs")
+    st.write(
+        "Um laboratório de estudos: exercícios, mini-projetos, páginas didáticas e experimentos com IA."
+    )
+    st.markdown("- Objetivo: aprender fazendo, com organização e evolução contínua")
+    st.html("""<a href="https://github.com/AldomarAssolin/python-labs" class="btn-links" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>""")
+
+with p2:
+    st.markdown("### 🏭 App de Controle de Produção (em evolução)")
+    st.write(
+        "Projeto focado em importação de planilhas, fila de produção por item, status e rastreio do fluxo (montagem → soldagem → inspeção)."
+    )
+    st.markdown("- Objetivo: digitalizar processos reais do meu contexto industrial")
+    st.html("""<a href="https://github.com/AldomarAssolin/op-app" class="btn-links" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>""")
 
 
 # ---- RODAPE ----

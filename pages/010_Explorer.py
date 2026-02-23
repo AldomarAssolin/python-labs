@@ -1,6 +1,7 @@
 from pathlib import Path
 import streamlit as st
 
+from ui.navbar import navbar
 from ui.sidebar import render_sidebar
 from ui.style import styles
 from ui.footer import footer
@@ -24,6 +25,9 @@ styles()
 # ---- CABEÇALHO ----
 header()
 
+# ---- Nav ----
+navbar()
+
 BASE_DIR = Path(__file__).resolve().parents[1]  # raiz do projeto
 
 st.title("📁 Explorer")
@@ -32,6 +36,7 @@ dir_name = st.query_params.get("dir")
 
 if not dir_name:
     st.info("Nenhuma pasta selecionada.")
+    st.caption("Encontre as pastas na página `Home` na seção `Estrutura do laboratório`.")
     st.stop()
 
 target = (BASE_DIR / dir_name).resolve()

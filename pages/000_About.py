@@ -1,5 +1,6 @@
 import streamlit as st
 
+from ui.navbar import navbar
 from ui.sidebar import render_sidebar
 from ui.style import styles
 from ui.header import header
@@ -21,6 +22,9 @@ styles()
 
 # ---- CABEÇALHO ----
 header()
+
+# ---- Nav ----
+navbar()
 
 # Config de layout
 st.title("👤 Sobre Mim")
@@ -74,28 +78,6 @@ with st.expander("📌 Minha trajetória (resumo)", expanded=True):
         """
     )
 
-# ====== PROVAS / PROJETOS ======
-st.subheader("Projetos em destaque")
-st.write("Algumas coisas que eu venho construindo para aprender e gerar valor:")
-
-p1, p2 = st.columns(2, gap="large")
-
-with p1:
-    st.markdown("### 🧠 Python Labs")
-    st.write(
-        "Um laboratório de estudos: exercícios, mini-projetos, páginas didáticas e experimentos com IA."
-    )
-    st.markdown("- Objetivo: aprender fazendo, com organização e evolução contínua")
-
-with p2:
-    st.markdown("### 🏭 App de Controle de Produção (em evolução)")
-    st.write(
-        "Projeto focado em importação de planilhas, fila de produção por item, status e rastreio do fluxo (montagem → soldagem → inspeção)."
-    )
-    st.markdown("- Objetivo: digitalizar processos reais do meu contexto industrial")
-
-st.divider()
-
 # ====== CONTATO / LINKS ======
 st.subheader("Contato e redes")
 
@@ -103,11 +85,11 @@ c1, c2, c3 = st.columns(3)
 
 with c1:
     st.markdown("**LinkedIn**")
-    st.write("linkedin.com/in/aldomarassolin")
+    st.write('<a href="https://www.linkedin.com/in/aldomarassolin" class="links" target="_blank">linkedin.com/aldomarassolin</a>', unsafe_allow_html=True)
 
 with c2:
     st.markdown("**GitHub**")
-    st.write("github.com/AldomarAssolin")
+    st.write('<a href="https://github.com/AldomarAssolin" class="links" target="_blank">github.com/AldomarAssolin</a>', unsafe_allow_html=True)
 
 with c3:
     st.markdown("**Email**")

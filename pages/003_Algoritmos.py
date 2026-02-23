@@ -2,21 +2,11 @@
 import streamlit as st
 from pathlib import Path
 import time
+from ui.navbar import navbar
 from ui.sidebar import render_sidebar
 from ui.style import styles
 from ui.footer import footer
 from ui.header import header
-
-# ---- SIDEBAR ----
-render_sidebar()
-
-# ---- ESTILO BÁSICO (CSS SIMPLES) ----
-styles()
-
-# ===============================
-# Header
-# ===============================
-header()
 
 # ===============================
 # CONFIGURAÇÕES DA PÁGINA
@@ -27,6 +17,18 @@ st.set_page_config(
     page_icon="〽",
     layout="wide",
 )
+
+# ---- SIDEBAR ----
+render_sidebar()
+
+# ---- ESTILO BÁSICO (CSS SIMPLES) ----
+styles()
+
+# ---- CABEÇALHO ----
+header()
+
+# ---- Nav ----
+navbar()
 
 # ---- CONTEÚDO DA PÁGINA ----
 # ------ Titulo ------

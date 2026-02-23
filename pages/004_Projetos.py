@@ -2,14 +2,18 @@
 import streamlit as st
 from pathlib import Path
 import os
+import base64
 import pandas as pd
 from typing import Dict, List
 import csv
-from streamlit_card import card
+from ui.card import card_container, card_html
+from ui.navbar import navbar
 from ui.sidebar import render_sidebar
 from ui.style import styles
 from ui.footer import footer
 from ui.header import header
+from core.config import BASE_DIR
+
 
 # ---- SIDEBAR ----
 render_sidebar()
@@ -36,6 +40,13 @@ BASE_DIR = os.path.dirname(__file__)
 CLEAN_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "social_media_clean.csv"))
 LIB_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "library_books.csv"))
 IMAGEM_CARD = os.path.abspath(os.path.join(BASE_DIR, "..", "public", "images", "thumb.png"))
+IMAGEM_THUMB = os.path.abspath(os.path.join(BASE_DIR, "..", "public", "images", "thumb-op-app.png"))
+
+image_thumb = Path(BASE_DIR) / "public" / "images" / "thumb.png"
+image_thumb = Path(BASE_DIR) / "public" / "images" / "thumb.png"
+
+# ---- Nav ----
+navbar()
 
 # ---- CONTEÚDO DA PÁGINA ----
 # ------ Titulo ------
@@ -55,39 +66,75 @@ with tab_principal:
     st.markdown("""
                 # 🚀 Projetos – Python Labs
 
-Este diretório reúne os meus projetos práticos dentro do Python Labs.  
-São experimentos, pequenos sistemas, testes e protótipos que aplicam na prática tudo o que estou estudando.
+    Este diretório reúne os meus projetos práticos dentro do Python Labs.  
+    São experimentos, pequenos sistemas, testes e protótipos que aplicam na prática tudo o que estou estudando.
 
----
+    ---
 
-## 🎯 Objetivo dos projetos
-- Transformar teoria em prática  
-- Construir portfólio real e progressivo  
-- Testar ideias e consolidar a aprendizagem  
-- Conectar Python com dados, IA, APIs e automações  
-- Criar aplicações pequenas, mas funcionais, que evoluem junto comigo  
+    ## 🎯 Objetivo dos projetos
+    - Transformar teoria em prática  
+    - Construir portfólio real e progressivo  
+    - Testar ideias e consolidar a aprendizagem  
+    - Conectar Python com dados, IA, APIs e automações  
+    - Criar aplicações pequenas, mas funcionais, que evoluem junto comigo  
 
----
+    ---
 
-## 📚 Base de estudo
-Os projetos são inspirados nos módulos do meu cronograma de IA:
+    ## 📚 Base de estudo
+    Os projetos são inspirados nos módulos do meu cronograma de IA:
 
-- Fundamentos de Python  
-- Manipulação e análise de dados (NumPy, Pandas)  
-- Machine Learning e classificação  
-- Redes neurais e visão computacional  
-- Criação de APIs com Flask/FastAPI  
-- Boas práticas de organização e versionamento  
+    - Fundamentos de Python  
+    - Manipulação e análise de dados (NumPy, Pandas)  
+    - Machine Learning e classificação  
+    - Redes neurais e visão computacional  
+    - Criação de APIs com Flask/FastAPI  
+    - Boas práticas de organização e versionamento  
 
-Referência: Cronograma de Aprendizado de IA com Python
+    Referência: Cronograma de Aprendizado de IA com Python
 
----
+    ---
 
-## 🧩 Estrutura típica de cada projeto
-Cada projeto tem seu próprio diretório:
-
+    ## 🧩 Estrutura típica de cada projeto
+    Cada projeto tem seu próprio diretório:
+    - `README.md` com descrição, objetivos e aprendizados.
+    - `exemplos práticos` com notebooks ou scripts de demonstração.
+    - `docs` com anotações, insights e codigos de exemplo.
+    
 
                 """)
+    
+    st.divider()
+
+    # ===============================
+    # Projetos em destaque
+    # ===============================
+
+    st.header("🚀 Projetos em destaque")
+    st.subheader("Algumas coisas que eu venho construindo para aprender e gerar valor")
+    st.divider()
+
+    def load_image_base64(image_path):
+        with open(image_path, "rb") as f:
+            return base64.b64encode(f.read()).decode()
+        
+    image_card_base64 = load_image_base64(IMAGEM_CARD)
+    image_op_app_base64 = load_image_base64(IMAGEM_THUMB)
+
+    card_labs = card_html(
+    title="Python Labs",
+    text="Um laboratório de estudos: exercícios, mini-projetos, páginas didáticas e experimentos com IA.",
+    image=f"data:image/png;base64,{image_card_base64}",
+    url="https://github.com/AldomarAssolin/python-labs"
+    )
+    
+    card_op_app = card_html(
+    title="App de Controle de Produção",
+    text="Projeto focado em importação de planilhas, fila de produção por item, status e rastreio do fluxo (montagem → soldagem → inspeção).",
+    image=f"data:image/png;base64,{image_op_app_base64}",
+    url="https://github.com/AldomarAssolin/op-app"
+    )
+
+    card_container([card_labs, card_op_app])
 
     
 # ===============================

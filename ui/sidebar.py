@@ -1,22 +1,24 @@
 # ui/sidebar.py
 import streamlit as st
-from streamlit_extras.badges import badge
 from core.config import BASE_DIR
 
 image_thumb = BASE_DIR / "public" / "images" / "thumb.png" 
 
 def render_sidebar():
     with st.sidebar:
-        # 👉 Imagem de topo (pode ser do GitHub, LinkedIn, etc.)
+        # 👉 Título e subtítulo
+        st.markdown("## 🧠 Python Labs | Dev em evolução")
+        st.markdown(""">Foco em backend, algoritmos e IA""")
+        st.markdown("---")
+        
+        # Imagem de perfil
         st.image(
             image_thumb, 
             caption="Aldomar “Manex” Assolin",
             
         )
 
-        # 👉 Título e subtítulo
-        st.markdown("## 🧠 Python Labs | Dev em evolução")
-        st.badge("Foco em backend, algoritmos e IA",color="violet")
+        
         
         # 👉 Status atual
         st.markdown("---")
@@ -24,10 +26,10 @@ def render_sidebar():
         st.write("• Foco atual: **Fundamentos de Python**")
         st.write("• Próximo passo: **Algoritmos**")
         st.write("• Objetivo: **chegar em IA aplicada**")
-        badge(type="github", name="AldomarAssolin/python-labs")
+        
         # 👉 Mini “badge” de jornada
         st.markdown("---")
-        st.caption("Jornada: Soldagem ➝ ADS ➝ Python & IA")
+        st.caption(">Jornada: Soldagem ➝ ADS ➝ Python & IA")
         st.markdown("---")
 
         # 👉 Links rápidos
@@ -42,8 +44,8 @@ def render_sidebar():
                         <img src="https://img.shields.io/badge/LinkedIn-AldomarAssolin-0A66C2?style=for-the-badge&logo=linkedIn&logoColor=white" alt="LinkedIn Badge">
                     </a>
                 </div>
-                 """,width="stretch",unsafe_allow_javascript=True)
+                 """)
 
         st.markdown("---")
-        st.caption("Versão 0.1 • Laboratório em construção")
+        st.caption("Versão 0.5 • Laboratório em construção")
 

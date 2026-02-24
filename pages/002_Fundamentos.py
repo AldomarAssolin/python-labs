@@ -1,5 +1,6 @@
 # pages/001_Fundamentos.py
 import streamlit as st
+import pandas as pd
 from pathlib import Path
 from datetime import datetime, date
 from ui.sidebar import render_sidebar
@@ -447,9 +448,7 @@ with tab_exemplos:
             if not alunos:
                 st.info("Nenhum aluno cadastrado.")
             else:
-                for a in alunos:
-                    st.write(f"ID: {a['id']} | Nome: {a['nome']} | Curso: {a['curso']} | Idade: {a['idade']} | Notas: {len(a['notas'])}")
-
+                st.write(pd.DataFrame(alunos, columns=["id", "nome", "idade", "curso", "notas"]))
         # =========================
         # 3) BUSCAR ALUNO
         # =========================
@@ -489,7 +488,11 @@ with tab_exemplos:
                 for a in alunos:
                     if a["notas"]:
                         media = sum(a["notas"]) / len(a["notas"])
-                        st.write(f"Aluno: {a['nome']} | Média: {media:.2f} | Notas: {a['notas']}")
+                        st.write(pd.DataFrame({
+                            "Aluno": [a["nome"]],
+                            "Média": [f"{media:.2f}"],
+                            "Notas": [", ".join(f"{n:.1f}" for n in a["notas"])]
+                        }))
                     else:
                         st.write(f"Aluno: {a['nome']} | Sem notas cadastradas")
 

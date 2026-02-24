@@ -203,7 +203,7 @@ with tab_exemplos:
             st.caption("Exemplo de conversão de `input()` no terminal para interface web com Streamlit.")
     
     # ----------------- Calculo Fatorial -----------------
-    with st.expander("📚 Cálculo do Fatorial em Python"):
+    with st.expander("📚 Exemplo: Cálculo do Fatorial em Python"):
         # Calculo Fatorial
         def fatorial(n):
             """Calcula o fatorial de n de forma recursiva."""

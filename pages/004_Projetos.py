@@ -198,7 +198,7 @@ with tab_exemplos:
         @st.cache_data
         def load_data():
             # Caminho do seu arquivo CSV
-            df = pd.read_csv(CSV_TECH_LAYOFFS)
+            df = pd.read_csv(CSV_TECH_LAYOFFS, parse_dates=["layoff_date"])
             df['layoff_date'] = pd.to_datetime(df['layoff_date'])
             return df
 

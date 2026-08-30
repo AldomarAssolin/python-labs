@@ -100,7 +100,7 @@ listas/
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/python-labs.git
+git clone https://github.com/AldomarAssolin/python-labs.git
 ```
 
 Entre na pasta:
@@ -167,10 +167,6 @@ Além disso, exercícios avançados como ordenação e slicing manual treinam:
 ## 👨‍💻 Autor  
 
 **Aldomar Assolin – Manex**  
-Desenvolvedor em formação • ADS • Lógica • Python • Backend • IA  
+Desenvolvedor em evolução • Python • Lógica • Backend • IA aplicada
 
-_Apaixonado por aprendizado constante e evolução profissional._
-
-<div align="center">
-⭐ Se este módulo te ajudou, deixe uma estrela no repositório!
-</div> 
+Estudo com constância e transformo cada módulo em evidência prática da minha evolução profissional.

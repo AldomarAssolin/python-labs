@@ -1,6 +1,6 @@
 # ⚙️ Algoritmos – Python Labs
 
-Este diretório faz parte da minha jornada de evolução em Python e Inteligência Artificial.
+Este módulo registra minha evolução em Python, algoritmos e Inteligência Artificial.
 
 Aqui estudo, implemento e documento algoritmos essenciais para desenvolver meu raciocínio lógico e minha base como programador.  
 Cada arquivo representa um capítulo do meu aprendizado — simples, direto e prático.
@@ -17,7 +17,7 @@ Cada arquivo representa um capítulo do meu aprendizado — simples, direto e pr
 
 ## 📚 Fontes de estudo
 - *Entendendo Algoritmos* — Aditya Bhargava  
-- Materiais complementares do meu cronograma de IA :contentReference[oaicite:0]{index=0}
+- Materiais complementares do meu cronograma de IA
 
 ---
 
@@ -40,8 +40,7 @@ Cada algoritmo terá:
 ---
 
 ## 🚀 Evolução contínua
-Este módulo não está “pronto”.  
-Ele cresce conforme estudo, pratico e reviso.  
-É parte do meu processo de desenvolvimento como programador — um passo de cada vez.
+Este módulo cresce conforme estudo, pratico e reviso.
+Ele demonstra meu compromisso com uma base técnica sólida e com a evolução consistente como desenvolvedor.
 
 ---

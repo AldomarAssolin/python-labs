@@ -71,17 +71,17 @@ with tab_principal:
     st.markdown("""
                 # 🚀 Projetos – Python Labs
 
-    Este diretório reúne os meus projetos práticos dentro do Python Labs.  
-    São experimentos, pequenos sistemas, testes e protótipos que aplicam na prática tudo o que estou estudando.
+    Esta página reúne meus projetos práticos dentro do Python Labs.
+    Aqui apresento experimentos, pequenos sistemas, testes e protótipos que mostram minha evolução técnica com aplicação prática.
 
     ---
 
     ## 🎯 Objetivo dos projetos
     - Transformar teoria em prática  
-    - Construir portfólio real e progressivo  
-    - Testar ideias e consolidar a aprendizagem  
+    - Construir um portfólio real, progressivo e bem documentado
+    - Testar ideias e consolidar aprendizado com consistência
     - Conectar Python com dados, IA, APIs e automações  
-    - Criar aplicações pequenas, mas funcionais, que evoluem junto comigo  
+    - Criar aplicações pequenas, mas funcionais, que demonstram dedicação e crescimento profissional
 
     ---
 
@@ -115,7 +115,7 @@ with tab_principal:
     # ===============================
 
     st.header("🚀 Projetos em destaque")
-    st.subheader("Algumas coisas que eu venho construindo para aprender e gerar valor")
+    st.subheader("Projetos que venho construindo para aprender, aplicar conhecimento e gerar valor")
     st.divider()
 
     def load_image_base64(image_path):
@@ -332,4 +332,4 @@ with tab_docs:
 # ===============================
 # Footer
 # ===============================
-footer()    
+footer()

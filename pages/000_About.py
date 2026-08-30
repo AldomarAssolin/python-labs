@@ -28,7 +28,7 @@ navbar()
 
 # Config de layout
 st.title("👤 Sobre Mim")
-st.caption("Um pouco da minha história, foco atual e como posso agregar.")
+st.caption("Minha trajetória, foco atual e direção profissional.")
 
 st.divider()
 
@@ -39,19 +39,27 @@ with col1:
     st.subheader("Quem eu sou")
     st.write(
         """
-Sou **Aldomar “Manex” Assolin**. Vim do chão de fábrica (soldagem e liderança de produção) e hoje estou em transição para **Análise e Desenvolvimento de Sistemas**.
+Sou **Aldomar “Manex” Assolin**. Vim do chão de fábrica, com experiência em soldagem,
+liderança de produção e melhoria de processos, e hoje direciono essa bagagem para
+**desenvolvimento de software, Python, dados e Inteligência Artificial aplicada**.
 
-Curto construir coisas úteis: apps simples, APIs, automações e ferramentas que resolvem problemas reais, especialmente os que eu vivi na indústria: **organização, rastreabilidade, produtividade e qualidade**.
+Minha formação atual inclui a **Pós-graduação em Gestão da Indústria 4.0**, em andamento,
+reforçando a conexão entre tecnologia, automação, processos industriais e aplicação prática.
+
+Tenho satisfação em construir coisas úteis: apps simples, APIs, automações, agentes determinísticos e ferramentas que
+resolvem problemas reais, especialmente os que eu vivi na indústria: **organização,
+rastreabilidade, produtividade e qualidade**.
         """
     )
 
     st.subheader("Meu foco atual")
     st.write(
         """
-- **Backend:** Python (projetos práticos) e evolução em Java/Spring Boot  
-- **Banco de dados:** SQL e modelagem relacional (e explorando NoSQL quando faz sentido)  
-- **Boas práticas:** organização de projeto, POO, arquitetura e documentação  
-- **Objetivo:** virar um dev capaz de pegar um problema e entregar uma solução do começo ao fim
+- **Artefato aplicado:** GTH Agents, sistema digital de apoio à decisão para o TCC da pós-graduação
+- **Backend:** Python, Django em trilha inicial e evolução em Java/Spring Boot
+- **Banco de dados:** SQL e modelagem relacional (e explorando NoSQL quando faz sentido)
+- **Boas práticas:** organização de projeto, POO, arquitetura, documentação e evidências
+- **Objetivo:** transformar problemas reais em soluções de software úteis, explicáveis e evolutivas
         """
     )
 
@@ -59,10 +67,11 @@ with col2:
     st.subheader("Stack (na prática)")
     st.markdown(
         """
-**Linguagens:** Python, Java, PHP, JavaScript  
-**Frameworks:** Streamlit, Flask (aprendendo), React (base)  
-**DB:** MySQL/SQL (bom domínio), modelagem ER  
+**Linguagens:** Python, Java, PHP, JavaScript
+**Frameworks:** Streamlit, Django (trilha inicial), Flask (aprendendo), React (base)
+**DB:** MySQL/SQL (bom domínio), modelagem ER
 **Ferramentas:** Git/GitHub, Postman, Swagger, Linux (em evolução)
+**Direção:** IA aplicada, agentes determinísticos, automações e Indústria 4.0
         """
     )
 
@@ -72,9 +81,10 @@ st.divider()
 with st.expander("📌 Minha trajetória (resumo)", expanded=True):
     st.write(
         """
-- **15 anos como soldador** e vivência forte em produção, processos e melhoria contínua  
-- Migração para tecnologia com foco em **desenvolvimento de software**  
-- Projetos próprios para consolidar aprendizagem (ex.: Python Labs, apps de gestão e API)
+- **15 anos como soldador** e vivência forte em produção, processos e melhoria contínua
+- Migração para tecnologia com foco em **desenvolvimento de software, Python e IA aplicada**
+- Formação em andamento em **Gestão da Indústria 4.0**
+- Projetos próprios para consolidar aprendizagem (ex.: Python Labs, GTH Agents como artefato aplicado, apps de gestão e API)
         """
     )
 
@@ -95,7 +105,7 @@ with c3:
     st.markdown("**Email**")
     st.write("assolinaldomar@gmail.com")
 
-st.info("Se você curte projetos com pegada prática (indústria + software), a gente vai se entender.")
+st.info("Meu foco é unir experiência industrial, estudo técnico e entrega prática em software, dados e IA aplicada.")
 
 
 # ---- RODAPE ----

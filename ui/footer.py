@@ -5,10 +5,10 @@ def footer():
     st.markdown("---")
     st.caption(
         "Este laboratório é um registro da minha evolução como desenvolvedor. "
-        "Nada aqui está “finalizado”: tudo está em construção — assim como eu."
+        "Cada página documenta estudo, prática e avanço consistente."
     )
     st.markdown("""
                 
-                Feito com muito ❤ por **Aldomar Assolin**
+                Desenvolvido com dedicação por **Aldomar Assolin**
                 
                 """)

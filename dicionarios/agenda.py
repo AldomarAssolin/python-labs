@@ -7,7 +7,7 @@ import csv
 import os
 
 BASE_DIR = os.path.dirname(__file__)
-CSV_PATH = os.path.join(BASE_DIR, "..", "docs", "agenda.csv")
+CSV_PATH = os.path.join(BASE_DIR, "..", "docs", "dados", "agenda.csv")
 
 CAMPOS = ["nome", "telefone", "email"]
 

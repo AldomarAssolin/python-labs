@@ -11,7 +11,7 @@ import pandas as pd
 import csv
 
 BASE_DIR = os.path.dirname(__file__)
-LIB_PATH = os.path.join(BASE_DIR, "..", "docs","library_books.csv")
+LIB_PATH = os.path.join(BASE_DIR, "..", "docs", "dados", "library_books.csv")
 
 # Lista que recebe dicionario de livros
 livros: List[Dict] = []
@@ -111,7 +111,6 @@ print("Livros Cadastrados")
 print("--------------------------")
 for livro in livros:
     print(f"- {livro['titulo']} ({livro['autor']})")
-
 
 
 

@@ -33,7 +33,7 @@ MENU = """
 
 BASE_DIR = Path(__file__).resolve().parent
 PROJETC_ROOT = BASE_DIR.parent
-FILEPATH =  PROJETC_ROOT / "docs" / "alunos.csv"
+FILEPATH =  PROJETC_ROOT / "docs" / "dados" / "alunos.csv"
 COLS = ['id', 'nome', 'idade', 'curso', 'notas']  
 
 print("Diretorio Base:", BASE_DIR)

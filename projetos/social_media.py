@@ -9,7 +9,7 @@ import pandas as pd
 import os
 
 BASE_DIR = os.path.dirname(__file__)
-CSV_PATH = os.path.join(BASE_DIR, "..", "docs", "social_media_engagement_data.csv")
+CSV_PATH = os.path.join(BASE_DIR, "..", "docs", "dados", "social_media_engagement_data.csv")
 
 raw = pd.read_csv(CSV_PATH, sep=";", header=None)
 
@@ -27,6 +27,6 @@ data = data[1:]
 data["DATE"] = pd.to_datetime(data["DATE"], dayfirst=True)
 data["DAILY IMPRESSIONS"] = pd.to_numeric(data["DAILY IMPRESSIONS"])
 
-OUTPUT_PATH = os.path.join(BASE_DIR, "..", "docs", "social_media_clean.csv")
+OUTPUT_PATH = os.path.join(BASE_DIR, "..", "docs", "dados", "social_media_clean.csv")
 data.to_csv(OUTPUT_PATH, index=False)
 print("Arquivo limpo salvo: social_media_clean.csv")

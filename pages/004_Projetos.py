@@ -41,11 +41,11 @@ st.set_page_config(
 )
 
 BASE_DIR = os.path.dirname(__file__)
-CLEAN_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "social_media_clean.csv"))
-LIB_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "library_books.csv"))
+CLEAN_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "dados", "social_media_clean.csv"))
+LIB_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "dados", "library_books.csv"))
 IMAGEM_CARD = os.path.abspath(os.path.join(BASE_DIR, "..", "public", "images", "thumb.png"))
 IMAGEM_THUMB = os.path.abspath(os.path.join(BASE_DIR, "..", "public", "images", "thumb-op-app.png"))
-CSV_TECH_LAYOFFS = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "tech_layoffs_2026_tracker.csv"))
+CSV_TECH_LAYOFFS = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "dados", "tech_layoffs_2026_tracker.csv"))
 
 image_thumb = Path(BASE_DIR) / "public" / "images" / "thumb.png"
 image_thumb = Path(BASE_DIR) / "public" / "images" / "thumb.png"

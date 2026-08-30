@@ -25,12 +25,13 @@ dicionarios/
  └── agenda.py
 
 docs/
- └── agenda.csv
+ └── dados/
+     └── agenda.csv
 ```
 
 ✨ `agenda.py` → lógica do sistema (CRUD, menu, validações)
 
-✨ `agenda.csv` → persistência dos dados
+✨ `docs/dados/agenda.csv` → persistência dos dados
 
 ---
 
@@ -106,7 +107,7 @@ O email é sempre salvo normalizado (`strip()` + `lower()`).
 python dicionarios/agenda.py
 ```
 
-3. O arquivo `docs/agenda.csv` será criado automaticamente, se não existir
+3. O arquivo `docs/dados/agenda.csv` será criado automaticamente, se não existir
 
 ## 🧪 Próximos Passos (Roadmap)
 
@@ -123,10 +124,9 @@ python dicionarios/agenda.py
 ## 👤 Autor
 
 **Aldomar Assolin – Manex**  
-Desenvolvedor em formação • ADS • Python • Backend • IA  
+Desenvolvedor em evolução • Python • Backend • Dados • IA aplicada
 Estudando com foco em lógica, estrutura de dados e engenharia de software.
 
 <div align="center">
-⭐ Se este módulo te ajudou, deixe uma estrela no repositório!<br>
-🧿 Foco em Python, lógica, backend e construção de sistemas reais
+Foco em Python, lógica, backend e construção de sistemas reais.
 </div>

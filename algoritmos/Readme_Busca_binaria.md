@@ -149,7 +149,7 @@ def pesquisa_binaria(lista, item):
 ## 🎬 Versão visual com Streamlit
 
 Criei uma página no Python Labs que:
-[Veja aqui!](https://aldomarassolin-python-labs-home-5w8pvc.streamlit.app/~/+/Busca_Binaria_Visual)
+[Veja aqui!](https://python.manexlabs.dev/Algoritmos)
 
 - mostra passo a passo (baixo, alto, meio, chute)
 - anima cada iteração com delay

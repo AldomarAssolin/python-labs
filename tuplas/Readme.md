@@ -127,7 +127,7 @@ Você verá:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/python-labs.git
+git clone https://github.com/AldomarAssolin/python-labs.git
 ```
 
 2. Entre na pasta:
@@ -194,9 +194,9 @@ Muitos modelos retornam tuplas de:
 ## 👤 Autor
 
 **Aldomar Assolin – Manex**  
-Desenvolvedor em formação • ADS • Python • Backend • IA  
+Desenvolvedor em evolução • Python • Backend • Dados • IA aplicada
 Estudando com foco em lógica, estrutura de dados e engenharia de software.
 
 <div align="center">
-⭐ Se este módulo te ajudou, deixe uma estrela no repositório!
+Registro este módulo como parte da minha evolução técnica em Python.
 </div>

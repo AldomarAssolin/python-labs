@@ -41,11 +41,11 @@ st.set_page_config(
 )
 
 BASE_DIR = os.path.dirname(__file__)
-CLEAN_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "social_media_clean.csv"))
-LIB_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "library_books.csv"))
+CLEAN_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "dados", "social_media_clean.csv"))
+LIB_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "dados", "library_books.csv"))
 IMAGEM_CARD = os.path.abspath(os.path.join(BASE_DIR, "..", "public", "images", "thumb.png"))
 IMAGEM_THUMB = os.path.abspath(os.path.join(BASE_DIR, "..", "public", "images", "thumb-op-app.png"))
-CSV_TECH_LAYOFFS = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "tech_layoffs_2026_tracker.csv"))
+CSV_TECH_LAYOFFS = os.path.abspath(os.path.join(BASE_DIR, "..", "docs", "dados", "tech_layoffs_2026_tracker.csv"))
 
 image_thumb = Path(BASE_DIR) / "public" / "images" / "thumb.png"
 image_thumb = Path(BASE_DIR) / "public" / "images" / "thumb.png"
@@ -71,17 +71,17 @@ with tab_principal:
     st.markdown("""
                 # 🚀 Projetos – Python Labs
 
-    Este diretório reúne os meus projetos práticos dentro do Python Labs.  
-    São experimentos, pequenos sistemas, testes e protótipos que aplicam na prática tudo o que estou estudando.
+    Esta página reúne meus projetos práticos dentro do Python Labs.
+    Aqui apresento experimentos, pequenos sistemas, testes e protótipos que mostram minha evolução técnica com aplicação prática.
 
     ---
 
     ## 🎯 Objetivo dos projetos
     - Transformar teoria em prática  
-    - Construir portfólio real e progressivo  
-    - Testar ideias e consolidar a aprendizagem  
+    - Construir um portfólio real, progressivo e bem documentado
+    - Testar ideias e consolidar aprendizado com consistência
     - Conectar Python com dados, IA, APIs e automações  
-    - Criar aplicações pequenas, mas funcionais, que evoluem junto comigo  
+    - Criar aplicações pequenas, mas funcionais, que demonstram dedicação e crescimento profissional
 
     ---
 
@@ -115,7 +115,7 @@ with tab_principal:
     # ===============================
 
     st.header("🚀 Projetos em destaque")
-    st.subheader("Algumas coisas que eu venho construindo para aprender e gerar valor")
+    st.subheader("Projetos que venho construindo para aprender, aplicar conhecimento e gerar valor")
     st.divider()
 
     def load_image_base64(image_path):
@@ -332,4 +332,4 @@ with tab_docs:
 # ===============================
 # Footer
 # ===============================
-footer()    
+footer()

@@ -1,145 +1,115 @@
 
-
 <img src="https://i.ibb.co/XkS3bNzQ/Chat-GPTPython-Labs.png" alt="Chat-GPTPython-Labs" width="460">
 
-# 🧠 Python Labs – Estudos de Python, Algoritmos e Inteligência Artificial
+# Python Labs
 
-Bem-vindo ao meu **laboratório de estudos em Python, Algoritmos e Inteligência Artificial**!
-Este repositório documenta minha jornada de aprendizado prático, combinando teoria, códigos, projetos e explicações para consolidar o conhecimento e construir um portfólio.
+Este é meu laboratório de estudos e evidências práticas em Python, Algoritmos, Dados, IA e Backend.
 
-***
+Organizo este repositorio por competencias, nao por curso ou plataforma. Minha regra de evolucao e:
 
-## 🎯 Objetivo
+> Conteudo -> laboratorio -> desafio -> aplicacao -> evidencia
 
-**Aprender Python de forma estruturada e progressiva**, praticando lógica, algoritmos e aplicações de IA via roteiro e projetos baseados em:
+## Dashboard
 
-- 📘 *Introdução à Programação com Python* — Nilo Ney Coutinho Menezes
-- 📗 *Entendendo Algoritmos* — Aditya Bhargava
-- 📙 *Cronograma pessoal: Aprendizado de IA com Python* (ADS)
-
-***
-
-## 🧩 Estrutura do Repositório
-
-```
-python-labs/
-│
-├── fundamentos/       # Conceitos básicos e exercícios do livro "Introdução à Programação com Python"
-│   ├── variaveis.py
-│   ├── condicoes.py
-│   ├── funcoes.py
-│   └── listas.py
-│
-├── algoritmos/        # Implementações do livro "Entendendo Algoritmos"
-│   ├── busca_linear.py
-│   ├── busca_binaria.py
-│   ├── ordenacao_selecao.py
-│   └── recursao.py
-│
-└── projetos/          # Projetos práticos de IA e Data Science
-    ├── projeto_1/
-    ├── projeto_2/
-    └── ...
-```
-
-Cada script terá comentários explicativos e **anotações pessoais** no README para reforço do aprendizado.
-
-***
-
-## 🧮 Módulos de Aprendizado
-
-| Módulo | Tema Principal | Conteúdo |
+| Area | Status no repositorio | Onde acompanhar |
 | :-- | :-- | :-- |
-| 1 | Fundamentos de Python | Sintaxe, funções, listas, tuplas, dicionários, POO |
-| 2 | Matemática e Estatística | Álgebra Linear, Probabilidade, Otimização |
-| 3 | Análise de Dados | NumPy, Pandas, Matplotlib, Seaborn |
-| 4 | Machine Learning | Regressão, Classificação, Clustering, Modelos |
-| 5 | Deep Learning | Redes Neurais, TensorFlow, PyTorch |
-| 6 | MLOps e Deploy | APIs Flask, Docker, Deploy em Nuvem |
-| 7 | Portfólio | Consolidação de projetos e estudos |
+| Fundamentos de Python | Exercicios e anotacoes existentes | [fundamentos/](fundamentos/) |
+| Listas, tuplas e dicionarios | Exemplos e pequenos sistemas de estudo | [listas/](listas/), [tuplas/](tuplas/), [dicionarios/](dicionarios/) |
+| Algoritmos | Implementacoes iniciais, incluindo busca binaria e fatorial | [algoritmos/](algoritmos/) |
+| Projetos praticos | Aplicacoes simples com CSV, pandas e Streamlit | [projetos/](projetos/) |
+| Dados e IA | Trilha documentada e bases de dados organizadas | [dados-ia/](dados-ia/), [docs/trilhas/ia-python.md](docs/trilhas/ia-python.md) |
+| Backend com Django | Area criada para estudos e laboratorios futuros | [backend/django/](backend/django/) |
+| Documentacao | Trilhas, referencias e dados auxiliares | [docs/](docs/) |
 
+## Trilhas
 
-***
+- [IA com Python](docs/trilhas/ia-python.md): minha trilha prática baseada no cronograma e no prompt de tutor existentes no repositorio.
+- [Django Master](docs/trilhas/django-master.md): espaço inicial para registrar estudos de Django sem misturar material de curso com projetos de portfolio.
 
-## 🧑‍💻 Como Executar
+## Estrutura Atual
 
-Clone o repositório:
+```text
+python-labs/
+├── algoritmos/
+├── backend/
+│   └── django/
+├── dados-ia/
+├── dicionarios/
+├── docs/
+│   ├── dados/
+│   ├── referencias/
+│   └── trilhas/
+├── fundamentos/
+├── listas/
+├── pages/
+├── projetos/
+├── tuplas/
+├── app.py
+├── Dockerfile
+├── requirements.txt
+└── requirements.lock.txt
+```
+
+## Como Executar
+
+Clone o repositorio:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/python-labs.git
+git clone https://github.com/AldomarAssolin/python-labs.git
 cd python-labs
 ```
 
-Crie e ative um ambiente virtual (recomendado):
+Crie e ative um ambiente virtual:
 
 ```bash
 python -m venv venv
-# Windows
-venv\Scripts\activate
-# Linux/macOS
 source venv/bin/activate
 ```
 
-Instale dependências (se houver):
+No Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Instale as dependencias:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Execute o exemplo desejado:
+Execute um exemplo:
 
 ```bash
 python fundamentos/variaveis.py
 ```
 
+Execute a aplicacao Streamlit:
 
-***
+```bash
+streamlit run app.py
+```
 
-## ✍️ Progresso e Anotações Pessoais
+## Projetos e Evidencias
 
-A cada exemplo ou projeto, explicarei o que foi aprendido, como o código funciona e possíveis aplicações.
-Esse método reforça a memória de longo prazo e deixa o portfólio profissional e didático!
+A pasta [projetos/](projetos/) concentra aplicações pequenas, funcionais e explicáveis. Promovo um estudo para essa área quando ele tem objetivo claro, entrada e saída verificáveis, e potencial de demonstrar uma competência.
 
-**Exemplo:**
-`fundamentos/variaveis.py` — Revisão de variáveis, f-strings e tipos básicos em Python.
+Exemplos existentes:
 
-***
+- [projetos/library.py](projetos/library.py)
+- [projetos/social_media.py](projetos/social_media.py)
 
-## 🧰 Tecnologias Utilizadas
+## Referencias
 
-- **Python 3.12+**
-- **Jupyter Notebook / Google Colab**
-- **VSCode** como editor principal
-- **GitHub** para versionamento e portfólio
+- [Introducao a Programacao com Python - Nilo Ney Coutinho Menezes](https://novatec.com.br/livros/introducao-programacao-python/)
+- [Entendendo Algoritmos - Aditya Bhargava](https://novatec.com.br/livros/entendendo-algoritmos/)
+- [Documentacao Oficial Python](https://docs.python.org/pt-br/3/)
+- [Cronograma pessoal de IA com Python](docs/referencias/Cronograma_de_Aprendizado_de_IA_com_Python_para_An.pdf)
+- [Prompt de tutor de IA com Python](docs/referencias/Prompt_para_IA__Tutor_de_Aprendizado_de_IA_com_Pyt.pdf)
 
-***
+## Autor
 
-## 🚀 Próximos Passos
-
-- Finalizar o **Módulo 1** (Fundamentos de Python)
-- Iniciar exercícios do livro **Entendendo Algoritmos**
-- Criar o primeiro mini-projeto de IA (**Módulo 3**)
-
-***
-
-## 📚 Referências
-
-- [Introdução à Programação com Python – Nilo Ney Coutinho Menezes](https://novatec.com.br/livros/introducao-programacao-python/)
-- [Entendendo Algoritmos – Aditya Bhargava](https://novatec.com.br/livros/entendendo-algoritmos/)
-- [Documentação Oficial Python (pt-br)](https://docs.python.org/pt-br/3/)
-- [Cronograma pessoal completo de IA com Python (PDF)](docs/Cronograma_de_Aprendizado_de_IA_com_Python_para_An.pdf)
-
-***
-
-## 🧩 Autor
-
-**Aldomar “Manex” Assolin** <br>
-Formando em Análise e Desenvolvimento de Sistemas | Entusiasta em IA <br>
+**Aldomar "Manex" Assolin**<br>
+Desenvolvedor em evolução | Python, Backend, Dados, IA aplicada e Gestão da Indústria 4.0<br>
 [LinkedIn](https://linkedin.com/in/aldomarassolin)<br>
 [GitHub](https://github.com/AldomarAssolin)
-
-***
-
-**💡 Sinta-se livre para contribuir, sugerir temas, ou usar este laboratório como base para seu próprio estudo!**
-
-***
